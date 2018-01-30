@@ -16,31 +16,14 @@
         render() {
           return (
             <div className="greeting">
-              <h1>Hello World!</h1>
-            </div>
-          );
-        }
-      }
-
-      class Farewell extends React.Component {
-        render() {
-          return (
-            <div className="farewell">
-              <h2>Goodbye!</h2>
+              <h1>Hello {this.props.name}!</h1>
             </div>
           );
         }
       }
 
         ReactDOM.render(
-          <div className="greetingRender">
-            <Greeting />
-          </div>, document.getElementById('app')
-        );
-        ReactDOM.render(
-          <div className="farewellRender">
-            <Farewell />
-          </div>, document.getElementById('app')
+          <Greeting name="Bloc Student"/>, document.getElementById('app')
         );
       </script>
   </body>
