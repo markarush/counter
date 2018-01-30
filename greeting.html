@@ -15,15 +15,32 @@
       class Greeting extends React.Component {
         render() {
           return (
-            <div>
+            <div className="greeting">
               <h1>Hello World!</h1>
             </div>
           );
         }
       }
 
+      class Farewell extends React.Component {
+        render() {
+          return (
+            <div className="farewell">
+              <h2>Goodbye!</h2>
+            </div>
+          );
+        }
+      }
+
         ReactDOM.render(
-          <Greeting />, document.getElementById('app')
+          <div className="greetingRender">
+            <Greeting />
+          </div>, document.getElementById('app')
+        );
+        ReactDOM.render(
+          <div className="farewellRender">
+            <Farewell />
+          </div>, document.getElementById('app')
         );
       </script>
   </body>
